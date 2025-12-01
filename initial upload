@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Elite Property Services | Home & Pool Renovations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Elite Property Services specializes in home renovations, pool repairs, and outdoor living spaces. Quality craftsmanship and honest service." />
+  <style>
+    :root {
+      --primary: #222222;
+      --accent: #c49a4a;
+      --light: #f7f7f7;
+      --text: #333333;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background: #ffffff;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(0,0,0,0.85);
+      color: #ffffff;
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-wrap img {
+      height: 42px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    nav a {
+      position: relative;
+      padding-bottom: 0.15rem;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.2s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.3);
+      background: #af8639;
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      min-height: 68vh;
+      color: #ffffff;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      background: #000;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.25)),
+        url("images/pergola-wood.jpg");
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.9);
+      z-index: -2;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(0,0,0,0.45), transparent 55%);
+      z-index: -1;
+    }
+
+    .hero-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 4.5rem 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-tag {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      opacity: 0.85;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.3rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      max-width: 34rem;
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .hero-card {
+      background: rgba(0,0,0,0.7);
+      border-radius: 1.25rem;
+      padding: 1.4rem 1.6rem;
+      border: 1px solid rgba(255,255,255,0.09);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+    }
+
+    .hero-card h3 {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      opacity: 0.9;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-card p {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-card strong {
+      font-size: 1rem;
+    }
+
+    main {
+      background: #ffffff;
+    }
+
+    section {
+      padding: 3.5rem 1.5rem;
+    }
+
+    .section-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      margin-bottom: 2.5rem;
+    }
+
+    .section-heading h2 {
+      font-size: 1.7rem;
+      margin-bottom: 0.4rem;
+      color: var(--primary);
+    }
+
+    .section-heading p {
+      color: #666666;
+      font-size: 0.98rem;
+      max-width: 34rem;
+    }
+
+    /* Services */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .service-card {
+      border-radius: 1.25rem;
+      padding: 1.6rem 1.5rem 1.7rem;
+      background: var(--light);
+      border: 1px solid #e1e1e1;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.04);
+    }
+
+    .service-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+      color: var(--primary);
+    }
+
+    .service-card p {
+      font-size: 0.94rem;
+      margin-bottom: 0.8rem;
+      color: #555;
+    }
+
+    .service-card ul {
+      list-style: none;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .service-card li::before {
+      content: "• ";
+      color: var(--accent);
+    }
+
+    /* Gallery */
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery-item {
+      border-radius: 1rem;
+      overflow: hidden;
+      border: 1px solid #e1e1e1;
+      background: #000;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease, opacity 0.35s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.03);
+      opacity: 0.92;
+    }
+
+    .gallery-caption {
+      padding: 0.6rem 0.9rem 0.8rem;
+      font-size: 0.85rem;
+      background: #f9f9f9;
+      color: #555;
+    }
+
+    /* About */
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2.25rem;
+      align-items: start;
+    }
+
+    .about-highlight {
+      background: #111111;
+      color: #ffffff;
+      border-radius: 1.25rem;
+      padding: 1.6rem 1.7rem;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+    }
+
+    .about-highlight h3 {
+      font-size: 1.05rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+      opacity: 0.9;
+    }
+
+    .about-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.9rem;
+      font-size: 0.8rem;
+    }
+
+    .badge {
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 0.25rem 0.75rem;
+      opacity: 0.9;
+    }
+
+    /* Contact */
+
+    .contact {
+      background: #111111;
+      color: #ffffff;
+    }
+
+    .contact .section-heading h2 {
+      color: #ffffff;
+    }
+
+    .contact .section-heading p {
+      color: #dddddd;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .contact-details p {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-details strong {
+      color: #ffffff;
+    }
+
+    .contact-box {
+      background: #1b1b1b;
+      border-radius: 1.25rem;
+      padding: 1.6rem 1.7rem;
+      border: 1px solid #2a2a2a;
+    }
+
+    .contact-box label {
+      display: block;
+      font-size: 0.85rem;
+      margin-bottom: 0.15rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.85;
+    }
+
+    .contact-box input,
+    .contact-box textarea {
+      width: 100%;
+      padding: 0.55rem 0.7rem;
+      border-radius: 0.6rem;
+      border: 1px solid #3a3a3a;
+      background: #111111;
+      color: #ffffff;
+      font: inherit;
+      margin-bottom: 0.7rem;
+    }
+
+    .contact-box small {
+      font-size: 0.75rem;
+      opacity: 0.7;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      border-top: 1px solid #222;
+      background: #050505;
+      color: #aaaaaa;
+      font-size: 0.82rem;
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.2rem 1.5rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.7rem;
+      align-items: center;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-card {
+        margin-top: 1rem;
+      }
+
+      .about-layout,
+      .contact-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      nav ul {
+        display: none; /* keep desktop nav only; simple for now */
+      }
+
+      .nav-inner {
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="logo-wrap">
+      <!-- Replace src with the path to your transparent logo -->
+      <img src="images/logo-elite.png" alt="Elite Property Services logo" />
+      <div class="logo-text">Elite Property Services</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="#contact" class="btn-primary">Request a quote</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">Home Renovations · Pool Repairs · Outdoor Living</div>
+      <h1>
+        Custom renovations and <span>pool transformations</span> built to last.
+      </h1>
+      <p>
+        Elite Property Services delivers high-quality home renovations, pool repairs, and outdoor living spaces with craftsmanship you can trust and service you can rely on.
+      </p>
+      <a href="#contact" class="btn-primary">Schedule your free estimate</a>
+      <div class="hero-meta">
+        <span>• Interior & exterior renovations</span>
+        <span>• Pool tile, coping & repairs</span>
+        <span>• Pergolas, patios & porches</span>
+      </div>
+    </div>
+
+    <aside class="hero-card">
+      <h3>Contact</h3>
+      <p><strong>Phone:</strong> (555) 555-5555</p>
+      <p><strong>Email:</strong> info@elitepropertyservices.com</p>
+      <p><strong>Service area:</strong> [Your City], Texas and surrounding communities</p>
+      <p>Licensed · Insured · Locally owned</p>
+    </aside>
+  </div>
+</section>
+
+<main>
+  <!-- Services -->
+  <section id="services">
+    <div class="section-inner">
+      <div class="section-heading">
+        <h2>What we do</h2>
+        <p>From dated interiors to damaged pool tile, we handle the details so you can enjoy your home again.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-label">Pools</div>
+          <h3>Pool repairs & renovations</h3>
+          <p>
+            Restore and refresh your pool with expert repairs and clean, modern finishes.
+          </p>
+          <ul>
+            <li>Tile, coping & plaster repairs</li>
+            <li>Water feature rebuilds & veneers</li>
+            <li>Decking, steps & safety updates</li>
+          </ul>
+        </article>
+
+        <article class="service-card">
+          <div class="service-label">Interiors</div>
+          <h3>Home renovations</h3>
+          <p>
+            Thoughtful updates that make everyday spaces brighter, more functional, and tailored to you.
+          </p>
+          <ul>
+            <li>Bathrooms & kitchens</li>
+            <li>Living rooms & built-ins</li>
+            <li>Flooring & trim work</li>
+          </ul>
+        </article>
+
+        <article class="service-card">
+          <div class="service-label">Outdoors</div>
+          <h3>Pergolas, porches & patios</h3>
+          <p>
+            Extend your living space outdoors with custom structures and detailed finishes.
+          </p>
+          <ul>
+            <li>Pergolas & patio covers</li>
+            <li>Front porches & railings</li>
+            <li>Outdoor seating & entertaining areas</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <div class="section-inner">
+      <div class="section-heading">
+        <h2>Recent projects</h2>
+        <p>A glimpse at some of the pergolas, porches, interiors, and pool features we’ve completed for homeowners like you.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="images/pergola-wood.jpg" alt="Custom stained wood pergola and deck" />
+          <figcaption class="gallery-caption">Custom stained pergola and raised deck.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="images/pergola-white.jpg" alt="White patio pergola attached to home" />
+          <figcaption class="gallery-caption">Clean, bright pergola for a shaded patio.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="images/front-porch.jpg" alt="Updated front porch with custom railing" />
+          <figcaption class="gallery-caption">Front porch refresh with detailed railing.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="images/bathroom.jpg" alt="Renovated bathroom with modern vanity and shower" />
+          <figcaption class="gallery-caption">Bathroom renovation with new vanity & shower.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="images/living-room.jpg" alt="Living room with built in shelving and fireplace" />
+          <figcaption class="gallery-caption">Updated living room with built-ins and fireplace.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="images/pool-before-after.jpg" alt="Before and after of repaired pool wall veneer" />
+          <figcaption class="gallery-caption">Pool veneer repair – before & after.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-heading">
+        <h2>About Elite Property Services</h2>
+        <p>We’re a local, hands-on company focused on quality craftsmanship, clear communication, and projects done right the first time.</p>
+      </div>
+
+      <div class="about-layout">
+        <div>
+          <p>
+            At Elite Property Services, we believe your home and outdoor spaces should work for the way you actually live. Whether you’re updating a bathroom, rebuilding a pool feature, or adding a new pergola, we bring the same attention to detail to every project.
+          </p>
+          <p>
+            You work directly with our team from estimate to final walkthrough. We show up when we say we will, protect your property while we work, and leave every job site clean.
+          </p>
+          <p>
+            If you’ve been putting off a renovation or repair, we’d love to talk through options and help you plan the right solution for your home.
+          </p>
+        </div>
+
+        <aside class="about-highlight">
+          <h3>Why homeowners choose us</h3>
+          <ul>
+            <li>Transparent, detailed estimates</li>
+            <li>Skilled craftsmanship in both interior and exterior work</li>
+            <li>Respectful crews and clean job sites</li>
+            <li>Projects scheduled around your life</li>
+          </ul>
+          <div class="about-badges">
+            <span class="badge">Locally owned</span>
+            <span class="badge">Home & pool experts</span>
+            <span class="badge">Quality-first mindset</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="section-inner">
+      <div class="section-heading">
+        <h2>Ready to talk about your project?</h2>
+        <p>Share a few details and we’ll follow up with a convenient time to look at your space and provide a quote.</p>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-details">
+          <p><strong>Phone:</strong> (555) 555-5555</p>
+          <p><strong>Email:</strong> info@elitepropertyservices.com</p>
+          <p><strong>Service area:</strong> [Your City], Texas & nearby communities</p>
+          <p>We typically respond to quote requests within one business day.</p>
+        </div>
+
+        <form class="contact-box" action="mailto:info@elitepropertyservices.com" method="post" enctype="text/plain">
+          <label for="name">Name</label>
+          <input id="name" name="Name" type="text" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="Email" type="email" required />
+
+          <label for="phone">Phone</label>
+          <input id="phone" name="Phone" type="tel" />
+
+          <label for="details">Project details</label>
+          <textarea id="details" name="Details" rows="4" placeholder="Tell us about your renovation or pool project..." required></textarea>
+
+          <small>This form will open your email app to send us your message.</small>
+
+          <button class="btn-primary" type="submit">Send my project details</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>© <span id="year"></span> Elite Property Services, LLC. All rights reserved.</span>
+    <span>Home renovations · Pool repairs · Outdoor living</span>
+  </div>
+</footer>
+
+<script>
+  // Update year in footer
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
