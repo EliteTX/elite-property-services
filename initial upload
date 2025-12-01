@@ -142,7 +142,7 @@
       inset: 0;
       background-image:
         linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.25)),
-        url("images/pergola-wood.jpg");
+        url("IMG_1772.jpg");
       background-size: cover;
       background-position: center;
       filter: brightness(0.9);
@@ -476,7 +476,7 @@
       }
 
       nav ul {
-        display: none; /* keep desktop nav only; simple for now */
+        display: none;
       }
 
       .nav-inner {
@@ -490,8 +490,8 @@
 <header>
   <div class="nav-inner">
     <div class="logo-wrap">
-      <!-- Replace src with the path to your transparent logo -->
-      <img src="images/logo-elite.png" alt="Elite Property Services logo" />
+      <!-- Uses your transparent logo file -->
+      <img src="logo transparent bakground.png" alt="Elite Property Services logo" />
       <div class="logo-text">Elite Property Services</div>
     </div>
     <nav>
@@ -597,33 +597,78 @@
 
       <div class="gallery-grid">
         <figure class="gallery-item">
-          <img src="images/pergola-wood.jpg" alt="Custom stained wood pergola and deck" />
+          <img src="IMG_1772.jpg" alt="Custom stained wood pergola and deck" />
           <figcaption class="gallery-caption">Custom stained pergola and raised deck.</figcaption>
         </figure>
 
         <figure class="gallery-item">
-          <img src="images/pergola-white.jpg" alt="White patio pergola attached to home" />
+          <img src="IMG_1776A.jpg" alt="White patio pergola attached to home" />
           <figcaption class="gallery-caption">Clean, bright pergola for a shaded patio.</figcaption>
         </figure>
 
         <figure class="gallery-item">
-          <img src="images/front-porch.jpg" alt="Updated front porch with custom railing" />
+          <img src="IMG_1781.jpg" alt="Updated front porch with custom railing" />
           <figcaption class="gallery-caption">Front porch refresh with detailed railing.</figcaption>
         </figure>
 
         <figure class="gallery-item">
-          <img src="images/bathroom.jpg" alt="Renovated bathroom with modern vanity and shower" />
+          <img src="IMG_1799.jpg" alt="Renovated bathroom with modern vanity and shower" />
           <figcaption class="gallery-caption">Bathroom renovation with new vanity & shower.</figcaption>
         </figure>
 
         <figure class="gallery-item">
-          <img src="images/living-room.jpg" alt="Living room with built in shelving and fireplace" />
+          <img src="IMG_1802.jpg" alt="Living room with built in shelving and fireplace" />
           <figcaption class="gallery-caption">Updated living room with built-ins and fireplace.</figcaption>
         </figure>
 
         <figure class="gallery-item">
-          <img src="images/pool-before-after.jpg" alt="Before and after of repaired pool wall veneer" />
+          <img src="veneer repair COMPLETED.jpg" alt="Before and after of repaired pool wall veneer" />
           <figcaption class="gallery-caption">Pool veneer repair – before & after.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="calcium clean AFTER1.jpg" alt="Pool tile after calcium cleaning" />
+          <figcaption class="gallery-caption">Calcium build-up removed from pool tile.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="fountain repair AFTER.jpg" alt="Repaired fountain feature" />
+          <figcaption class="gallery-caption">Fountain feature repaired and refreshed.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="lake tile redo AFTER.jpg" alt="Lake-side pool tile redo" />
+          <figcaption class="gallery-caption">Pool tile redo for a clean shoreline look.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="paver step repair AFTER.jpg" alt="Repaired paver steps" />
+          <figcaption class="gallery-caption">Paver steps repaired and leveled.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="planter coping repair AFTER1.jpg" alt="Planter coping repair around pool" />
+          <figcaption class="gallery-caption">Planter coping repairs tying into pool decking.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="screen fence AFTER.jpg" alt="Screen fence repair" />
+          <figcaption class="gallery-caption">Updated screen fence for privacy and safety.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="spa spillway repair AFTER.jpg" alt="Spa spillway repair" />
+          <figcaption class="gallery-caption">Spa spillway rebuilt for smooth water flow.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="tile redo AFTER1.jpg" alt="Pool tile redo closeup" />
+          <figcaption class="gallery-caption">Fresh pool tile for a modern edge.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="tile redo2 AFTER1.jpg" alt="Another pool tile redo" />
+          <figcaption class="gallery-caption">Another angle of updated pool tile work.</figcaption>
         </figure>
       </div>
     </div>
