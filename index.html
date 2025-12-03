@@ -24,7 +24,7 @@
     }
 
     body {
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: "Inter", sans-serif;
       color: var(--text);
       background: #fff;
       line-height: 1.6;
@@ -35,12 +35,12 @@
       display: block;
     }
 
-    h1, h2, h3, h4, h5, h6,
-    .logo-text {
+    h1, h2, h3, h4 {
       font-family: "Cinzel", serif;
       letter-spacing: 0.05em;
     }
 
+    /* HEADER */
     header {
       position: sticky;
       top: 0;
@@ -64,12 +64,6 @@
       display: flex;
       align-items: center;
       gap: 0.75rem;
-    }
-
-    .logo-text {
-      font-weight: 600;
-      font-size: 0.95rem;
-      text-transform: uppercase;
     }
 
     nav ul {
@@ -110,13 +104,11 @@
       font-weight: 600;
       text-decoration: none;
       box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-      font-family: "Inter", sans-serif;
       font-size: 0.9rem;
     }
 
     .btn-primary:hover {
       background: #b3873d;
-      box-shadow: 0 10px 24px rgba(0,0,0,0.3);
     }
 
     /* HERO */
@@ -138,7 +130,6 @@
         url("IMG_1772.jpg");
       background-size: cover;
       background-position: center;
-      filter: brightness(0.9);
       z-index: -1;
     }
 
@@ -158,11 +149,11 @@
       font-size: 0.75rem;
       opacity: 0.9;
       margin-bottom: 0.8rem;
-      font-family: "Inter", sans-serif;
     }
 
     .hero h1 {
-      font-size: clamp(2.3rem, 4vw, 3rem);
+      font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+      line-height: 1.25;
       margin-bottom: 1rem;
     }
 
@@ -176,6 +167,7 @@
       font-size: 1rem;
     }
 
+    /* CONTACT BOX IN HERO */
     .hero-card {
       background: rgba(0,0,0,0.7);
       padding: 1.4rem 1.6rem;
@@ -210,77 +202,14 @@
       margin-bottom: 0.5rem;
     }
 
-    .section-heading p {
-      font-size: 0.98rem;
-      color: #666;
-      max-width: 34rem;
-    }
-
-    /* SERVICES */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-      gap: 1.75rem;
-    }
-
-    .service-card {
-      background: var(--light);
-      padding: 1.6rem;
-      border-radius: 1.25rem;
-      border: 1px solid #e1e1e1;
-    }
-
-    .service-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .service-card p {
-      font-size: 0.95rem;
-      color: #555;
-    }
-
-    /* GALLERY */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-      gap: 1rem;
-    }
-
-    .gallery-item {
-      border-radius: 1rem;
-      overflow: hidden;
-      border: 1px solid #e1e1e1;
-      background: #000;
-    }
-
-    .gallery-item img {
-      transition: 0.3s;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.03);
-      opacity: 0.92;
-    }
-
-    /* ABOUT */
-    #about p {
-      font-size: 0.98rem;
-      color: #555;
-      max-width: 42rem;
-    }
-
-    /* CONTACT */
-    .contact {
+    /* CONTACT SECTION */
+    #contact {
       background: #111;
       color: #fff;
     }
 
-    .contact .section-heading p {
-      color: #ddd;
+    #contact .section-heading h2 {
+      color: var(--accent);
     }
 
     .contact-layout {
@@ -290,38 +219,7 @@
       align-items: flex-start;
     }
 
-    .contact-layout p {
-      font-size: 0.95rem;
-    }
-
-    .contact-box {
-      background: #1a1a1a;
-      border-radius: 1.25rem;
-      padding: 1.6rem 1.7rem;
-      border: 1px solid #2a2a2a;
-    }
-
-    .contact-box label {
-      display: block;
-      margin-bottom: 0.15rem;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
-
-    .contact-box input,
-    .contact-box textarea {
-      width: 100%;
-      padding: 0.55rem 0.7rem;
-      border-radius: 0.6rem;
-      border: 1px solid #3a3a3a;
-      background: #111;
-      color: #fff;
-      font-family: "Inter", sans-serif;
-      font-size: 0.9rem;
-      margin-bottom: 0.8rem;
-    }
-
+    /* FOOTER */
     footer {
       background: #050505;
       border-top: 1px solid #222;
@@ -331,22 +229,15 @@
       font-size: 0.82rem;
     }
 
-    /* RESPONSIVE */
     @media (max-width: 900px) {
       .hero-inner {
-        grid-template-columns: minmax(0,1fr);
+        grid-template-columns: 1fr;
       }
-
       .hero-card {
         margin-top: 1.5rem;
       }
-
-      .contact-layout {
-        grid-template-columns: minmax(0,1fr);
-      }
-
       nav ul {
-        display: none; /* keep it simple on mobile */
+        display: none;
       }
     }
   </style>
@@ -360,7 +251,7 @@
     <div class="logo-wrap">
       <img src="logo transparent bakground.png"
            alt="Elite Property Services logo"
-           style="height:36px; width:auto;">
+           style="height:36px; width:auto; filter:grayscale(100%) brightness(75%); opacity:0.75;">
       <div class="logo-text">Elite Property Services</div>
     </div>
 
@@ -383,12 +274,20 @@
 
     <div>
       <p class="hero-tag">Home Renovations · Pool Repairs · Outdoor Living</p>
-      <h1>Custom renovations & <span>pool transformations</span> built to last.</h1>
+      <h1>
+        Custom renovations<br>
+        & <span>pool transformations</span><br>
+        built to last.
+      </h1>
       <p>Serving DFW and surrounding areas with expert craftsmanship, honest service, and attention to detail.</p>
       <a href="#contact" class="btn-primary">Schedule your free estimate</a>
     </div>
 
     <aside class="hero-card">
+      <img src="logo transparent bakground.png"
+           alt="Elite Property Services logo"
+           style="height:46px; width:auto; display:block; margin:0 auto 1rem; filter:grayscale(100%) brightness(80%); opacity:0.9;">
+
       <h3>Contact</h3>
       <p><strong>Phone:</strong> 214-460-9415</p>
       <p><strong>Email:</strong> admin@elitetexas.co</p>
@@ -439,81 +338,25 @@
 
     <div class="gallery-grid">
 
-      <figure class="gallery-item">
-        <img src="IMG_1772.jpg" alt="Wood pergola and deck" />
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="IMG_1776a.jpg" alt="White pergola attached to home" />
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="IMG_1781.jpg" alt="Front porch with custom railing" />
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="IMG_1799.jpg" alt="Renovated bathroom" />
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="IMG_1802.jpg" alt="Updated living room with fireplace" />
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="veneer repair COMPLETED.jpg" alt="Pool veneer repair before and after" />
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="calcium clean AFTER1.jpg" alt="Calcium clean on pool tile" />
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="calcium clean AFTER2.jpg" alt="Calcium clean second angle" />
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="fountain repair AFTER.jpg" alt="Fountain repair" />
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="lake tile redo AFTER.jpg" alt="Lake tile redo" />
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="paver step repair AFTER.jpg" alt="Paver step repair" />
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="planter coping repair AFTER1.jpg" alt="Planter coping repair" />
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="planter coping repair AFTER2.jpg" alt="Planter coping repair second angle" />
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="screen fence AFTER.jpg" alt="Screen fence repair" />
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="spa spillway redo AFTER.jpg" alt="Spa spillway redo" />
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="spillway repair AFTER.jpg" alt="Spillway repair" />
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="tile redo AFTER.jpg" alt="Tile redo" />
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="tile redo2 AFTER.jpg" alt="Tile redo wide view" />
-      </figure>
-
-      <figure class="gallery-item">
-        <img src="tile redo2 AFTER2.jpg" alt="Tile redo alternate angle" />
-      </figure>
+      <figure class="gallery-item"><img src="IMG_1772.jpg"></figure>
+      <figure class="gallery-item"><img src="IMG_1776a.jpg"></figure>
+      <figure class="gallery-item"><img src="IMG_1781.jpg"></figure>
+      <figure class="gallery-item"><img src="IMG_1799.jpg"></figure>
+      <figure class="gallery-item"><img src="IMG_1802.jpg"></figure>
+      <figure class="gallery-item"><img src="veneer repair COMPLETED.jpg"></figure>
+      <figure class="gallery-item"><img src="calcium clean AFTER1.jpg"></figure>
+      <figure class="gallery-item"><img src="calcium clean AFTER2.jpg"></figure>
+      <figure class="gallery-item"><img src="fountain repair AFTER.jpg"></figure>
+      <figure class="gallery-item"><img src="lake tile redo AFTER.jpg"></figure>
+      <figure class="gallery-item"><img src="paver step repair AFTER.jpg"></figure>
+      <figure class="gallery-item"><img src="planter coping repair AFTER1.jpg"></figure>
+      <figure class="gallery-item"><img src="planter coping repair AFTER2.jpg"></figure>
+      <figure class="gallery-item"><img src="screen fence AFTER.jpg"></figure>
+      <figure class="gallery-item"><img src="spa spillway redo AFTER.jpg"></figure>
+      <figure class="gallery-item"><img src="spillway repair AFTER.jpg"></figure>
+      <figure class="gallery-item"><img src="tile redo AFTER.jpg"></figure>
+      <figure class="gallery-item"><img src="tile redo2 AFTER.jpg"></figure>
+      <figure class="gallery-item"><img src="tile redo2 AFTER2.jpg"></figure>
 
     </div>
 
@@ -583,4 +426,3 @@
 
 </body>
 </html>
-
