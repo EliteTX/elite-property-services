@@ -324,13 +324,13 @@
     .contact-logo-bg {
       position: absolute;
       left: 0;                 /* far left of dark block */
-      bottom: -0.5in;          /* moved down ~1/2 inch */
-      width: 780px;            /* 50% larger than previous 520px */
+      bottom: 0;               /* sit right on the bottom */
+      width: 780px;            /* large logo spanning under contact area */
       max-width: 70%;
       height: auto;
       opacity: 0.9;            /* 90% opacity */
-      /* medium gray: grayscale then darken */
-      filter: grayscale(100%) brightness(60%);
+      /* dark gray: grayscale then darken strongly */
+      filter: grayscale(100%) brightness(35%);
       pointer-events: none;
       z-index: 1;              /* behind text, in front of background */
     }
