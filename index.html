@@ -308,6 +308,8 @@
     #contact {
       background: #111;
       color: #fff;
+      position: relative; /* so logo can be positioned inside this block */
+      overflow: hidden;
     }
 
     #contact .section-heading h2 {
@@ -316,6 +318,26 @@
 
     #contact .section-heading p {
       color: #ddd;
+    }
+
+    /* BIG STAND-ALONE LOGO UNDER CONTACT CONTENT */
+    .contact-logo-bg {
+      position: absolute;
+      left: 0;                /* far left of dark block */
+      bottom: 0;              /* bottom of dark block */
+      width: 520px;           /* large logo spanning under contact area */
+      max-width: 55%;
+      height: auto;
+      opacity: 0.9;           /* 90% opacity */
+      filter: grayscale(100%) brightness(90%);
+      pointer-events: none;
+      z-index: 1;             /* behind text, in front of background */
+    }
+
+    .contact-layout,
+    #contact .section-heading {
+      position: relative;
+      z-index: 2;             /* text and form above logo */
     }
 
     .contact-layout {
@@ -329,32 +351,9 @@
       font-size: 0.95rem;
     }
 
-    /* LEFT CONTACT INFO BOX - BIG LOGO BOTTOM LEFT, 90% VISIBLE, FRONT LAYER */
     .contact-info {
-      position: relative;
       padding: 1.5rem 1.5rem 2rem;
-      overflow: hidden;
       min-height: 260px;
-    }
-
-    .contact-info::before {
-      content: "";
-      position: absolute;
-      left: 0;                     /* bottom-left corner */
-      bottom: 0;
-      width: 384%;                 /* 20% larger than 320% */
-      height: 384%;
-      transform: none;
-      background: url("logo transparent bakground.png") left bottom/contain no-repeat;
-      opacity: 0.9;                /* 90% visible */
-      filter: grayscale(100%) brightness(90%);
-      pointer-events: none;
-      z-index: 2;                  /* bring logo forward */
-    }
-
-    .contact-info > * {
-      position: relative;
-      z-index: 3;                  /* keep text readable above logo */
     }
 
     .contact-box {
@@ -407,6 +406,10 @@
       }
       .contact-layout {
         grid-template-columns: 1fr;
+      }
+      .contact-logo-bg {
+        width: 70%;
+        max-width: 70%;
       }
     }
   </style>
@@ -549,6 +552,13 @@
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
+  <!-- BIG STAND-ALONE LOGO UNDER ENTIRE CONTACT AREA -->
+  <img
+    src="logo transparent bakground.png"
+    alt="Elite Property Services logo"
+    class="contact-logo-bg"
+  />
+
   <div class="section-inner">
 
     <div class="section-heading">
