@@ -342,11 +342,11 @@
       position: absolute;
       left: 50%;
       top: 50%;
-      width: 140%;
-      height: 140%;
+      width: 260%;      /* much larger logo */
+      height: 260%;     /* fills almost full banner height */
       transform: translate(-50%, -50%);
       background: url("logo transparent bakground.png") center/contain no-repeat;
-      opacity: 0.5; /* about 50% transparent */
+      opacity: 0.6;     /* 60% visible, 40% transparent */
       filter: grayscale(100%) brightness(80%);
       pointer-events: none;
       z-index: 0;
@@ -354,7 +354,7 @@
 
     .contact-info > * {
       position: relative;
-      z-index: 1; /* keep text above logo */
+      z-index: 1;       /* keep text above logo */
     }
 
     .contact-box {
