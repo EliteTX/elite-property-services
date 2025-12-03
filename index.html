@@ -323,21 +323,22 @@
     /* BIG STAND-ALONE LOGO UNDER CONTACT CONTENT */
     .contact-logo-bg {
       position: absolute;
-      left: 0;                /* far left of dark block */
-      bottom: 0;              /* bottom of dark block */
-      width: 520px;           /* large logo spanning under contact area */
-      max-width: 55%;
+      left: 0;                 /* far left of dark block */
+      bottom: -0.5in;          /* moved down ~1/2 inch */
+      width: 780px;            /* 50% larger than previous 520px */
+      max-width: 70%;
       height: auto;
-      opacity: 0.9;           /* 90% opacity */
-      filter: grayscale(100%) brightness(90%);
+      opacity: 0.9;            /* 90% opacity */
+      /* medium gray: grayscale then darken */
+      filter: grayscale(100%) brightness(60%);
       pointer-events: none;
-      z-index: 1;             /* behind text, in front of background */
+      z-index: 1;              /* behind text, in front of background */
     }
 
     .contact-layout,
     #contact .section-heading {
       position: relative;
-      z-index: 2;             /* text and form above logo */
+      z-index: 2;              /* text and form above logo */
     }
 
     .contact-layout {
