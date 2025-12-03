@@ -180,7 +180,7 @@
       font-size: 1rem;
     }
 
-    /* RIGHT SIDE OF HERO (LOGO + CONTACT BOX) */
+    /* RIGHT SIDE OF HERO (LOGO + CONTACT INFO) */
     .hero-right {
       display: flex;
       flex-direction: column;
@@ -329,7 +329,7 @@
       font-size: 0.95rem;
     }
 
-    /* LEFT CONTACT INFO BOX WITH BIG, LEFT, LOWER, 80% LOGO */
+    /* LEFT CONTACT INFO BOX - BIG LOGO BOTTOM LEFT, 90% VISIBLE, FRONT LAYER */
     .contact-info {
       position: relative;
       padding: 1.5rem 1.5rem 2rem;
@@ -340,21 +340,21 @@
     .contact-info::before {
       content: "";
       position: absolute;
-      left: 0%;                  /* far left */
-      top: 60%;                  /* moved down */
-      width: 320%;               /* very large logo */
-      height: 320%;
-      transform: translate(0, -50%);
-      background: url("logo transparent bakground.png") left center/contain no-repeat;
-      opacity: 0.8;              /* 80% visible */
-      filter: grayscale(100%) brightness(80%);
+      left: 0;                     /* bottom-left corner */
+      bottom: 0;
+      width: 384%;                 /* 20% larger than 320% */
+      height: 384%;
+      transform: none;
+      background: url("logo transparent bakground.png") left bottom/contain no-repeat;
+      opacity: 0.9;                /* 90% visible */
+      filter: grayscale(100%) brightness(90%);
       pointer-events: none;
-      z-index: 0;
+      z-index: 2;                  /* bring logo forward */
     }
 
     .contact-info > * {
       position: relative;
-      z-index: 1;
+      z-index: 3;                  /* keep text readable above logo */
     }
 
     .contact-box {
@@ -451,7 +451,7 @@
       <a href="#contact" class="btn-primary">Schedule your free estimate</a>
     </div>
 
-    <!-- RIGHT SIDE: LOGO ABOVE CONTACT BOX -->
+    <!-- RIGHT SIDE: LOGO ABOVE CONTACT CARD -->
     <div class="hero-right">
       <div class="hero-logo-panel">
         <img src="logo transparent bakground.png" alt="Elite Property Services logo">
