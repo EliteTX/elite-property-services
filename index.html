@@ -4,13 +4,17 @@
   <meta charset="UTF-8" />
   <title>Elite Property Services | Home & Pool Renovations</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Elite Property Services in Prosper, TX provides home renovations, pool repairs, and outdoor living projects throughout DFW and surrounding areas. Quality craftsmanship and honest service." />
+  <meta name="description" content="Elite Property Services specializes in home renovations, pool repairs, and outdoor living spaces throughout DFW and surrounding areas. Quality craftsmanship and honest service." />
+
+  <!-- Google Fonts: Cinzel (headings) + Inter (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --primary: #222222;
+      --primary: #222;
       --accent: #c49a4a;
       --light: #f7f7f7;
-      --text: #333333;
+      --text: #333;
     }
 
     * {
@@ -20,10 +24,10 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--text);
+      background: #fff;
       line-height: 1.6;
-      background: #ffffff;
     }
 
     img {
@@ -31,17 +35,18 @@
       display: block;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    h1, h2, h3, h4, h5, h6,
+    .logo-text {
+      font-family: "Cinzel", serif;
+      letter-spacing: 0.05em;
     }
 
     header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(0,0,0,0.85);
-      color: #ffffff;
+      background: rgba(0,0,0,0.9);
+      color: #fff;
       backdrop-filter: blur(8px);
     }
 
@@ -61,35 +66,22 @@
       gap: 0.75rem;
     }
 
-    .logo-mark {
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.35);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.7rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      opacity: 0.9;
-    }
-
     .logo-text {
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      font-size: 0.85rem;
+      font-weight: 600;
+      font-size: 0.95rem;
       text-transform: uppercase;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      gap: 1.25rem;
-      font-size: 0.9rem;
+      gap: 1.4rem;
     }
 
     nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
       position: relative;
       padding-bottom: 0.15rem;
     }
@@ -110,38 +102,30 @@
     }
 
     .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
       padding: 0.7rem 1.4rem;
       border-radius: 999px;
-      border: none;
       background: var(--accent);
       color: #fff;
+      border: none;
       font-weight: 600;
-      cursor: pointer;
-      font-size: 0.95rem;
-      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
       text-decoration: none;
-      white-space: nowrap;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+      font-family: "Inter", sans-serif;
+      font-size: 0.9rem;
     }
 
     .btn-primary:hover {
-      transform: translateY(-1px);
+      background: #b3873d;
       box-shadow: 0 10px 24px rgba(0,0,0,0.3);
-      background: #af8639;
     }
 
-    /* Hero */
-
+    /* HERO */
     .hero {
       position: relative;
       min-height: 68vh;
-      color: #ffffff;
+      color: #fff;
       display: flex;
       align-items: stretch;
-      justify-content: center;
       background: #000;
     }
 
@@ -155,20 +139,13 @@
       background-size: cover;
       background-position: center;
       filter: brightness(0.9);
-      z-index: -2;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top left, rgba(0,0,0,0.45), transparent 55%);
       z-index: -1;
     }
 
     .hero-inner {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 4.5rem 1.5rem 4rem;
+      padding: 4.5rem 1.5rem;
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
       gap: 2.5rem;
@@ -177,15 +154,15 @@
 
     .hero-tag {
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.78rem;
-      opacity: 0.85;
-      margin-bottom: 0.75rem;
+      letter-spacing: 0.16em;
+      font-size: 0.75rem;
+      opacity: 0.9;
+      margin-bottom: 0.8rem;
+      font-family: "Inter", sans-serif;
     }
 
     .hero h1 {
       font-size: clamp(2.3rem, 4vw, 3rem);
-      line-height: 1.1;
       margin-bottom: 1rem;
     }
 
@@ -195,49 +172,25 @@
 
     .hero p {
       max-width: 34rem;
+      margin-bottom: 1.4rem;
       font-size: 1rem;
-      opacity: 0.9;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      font-size: 0.9rem;
-      opacity: 0.9;
     }
 
     .hero-card {
       background: rgba(0,0,0,0.7);
-      border-radius: 1.25rem;
       padding: 1.4rem 1.6rem;
-      border: 1px solid rgba(255,255,255,0.09);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.45);
+      border-radius: 1.25rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.95rem;
     }
 
     .hero-card h3 {
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      opacity: 0.9;
-      margin-bottom: 0.5rem;
-    }
-
-    .hero-card p {
-      font-size: 0.9rem;
-      opacity: 0.9;
-      margin-bottom: 0.4rem;
-    }
-
-    .hero-card strong {
       font-size: 1rem;
+      margin-bottom: 0.6rem;
+      text-transform: uppercase;
     }
 
-    main {
-      background: #ffffff;
-    }
-
+    /* SECTIONS */
     section {
       padding: 3.5rem 1.5rem;
     }
@@ -248,73 +201,49 @@
     }
 
     .section-heading {
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
 
     .section-heading h2 {
-      font-size: 1.7rem;
-      margin-bottom: 0.4rem;
+      font-size: 1.8rem;
       color: var(--primary);
+      margin-bottom: 0.5rem;
     }
 
     .section-heading p {
-      color: #666666;
       font-size: 0.98rem;
+      color: #666;
       max-width: 34rem;
     }
 
-    /* Services */
-
+    /* SERVICES */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
       gap: 1.75rem;
     }
 
     .service-card {
-      border-radius: 1.25rem;
-      padding: 1.6rem 1.5rem 1.7rem;
       background: var(--light);
+      padding: 1.6rem;
+      border-radius: 1.25rem;
       border: 1px solid #e1e1e1;
-      box-shadow: 0 10px 26px rgba(0,0,0,0.04);
-    }
-
-    .service-label {
-      font-size: 0.78rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.35rem;
     }
 
     .service-card h3 {
       font-size: 1.2rem;
       margin-bottom: 0.4rem;
-      color: var(--primary);
     }
 
     .service-card p {
-      font-size: 0.94rem;
-      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
       color: #555;
     }
 
-    .service-card ul {
-      list-style: none;
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    .service-card li::before {
-      content: "• ";
-      color: var(--accent);
-    }
-
-    /* Gallery */
-
+    /* GALLERY */
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
       gap: 1rem;
     }
 
@@ -326,10 +255,10 @@
     }
 
     .gallery-item img {
+      transition: 0.3s;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.35s ease, opacity 0.35s ease;
     }
 
     .gallery-item:hover img {
@@ -337,86 +266,36 @@
       opacity: 0.92;
     }
 
-    .gallery-caption {
-      padding: 0.6rem 0.9rem 0.8rem;
-      font-size: 0.85rem;
-      background: #f9f9f9;
+    /* ABOUT */
+    #about p {
+      font-size: 0.98rem;
       color: #555;
+      max-width: 42rem;
     }
 
-    /* About */
-
-    .about-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-      gap: 2.25rem;
-      align-items: start;
-    }
-
-    .about-highlight {
-      background: #111111;
-      color: #ffffff;
-      border-radius: 1.25rem;
-      padding: 1.6rem 1.7rem;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.4);
-    }
-
-    .about-highlight h3 {
-      font-size: 1.05rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      margin-bottom: 0.8rem;
-      opacity: 0.9;
-    }
-
-    .about-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.9rem;
-      font-size: 0.8rem;
-    }
-
-    .badge {
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.25);
-      padding: 0.25rem 0.75rem;
-      opacity: 0.9;
-    }
-
-    /* Contact */
-
+    /* CONTACT */
     .contact {
-      background: #111111;
-      color: #ffffff;
-    }
-
-    .contact .section-heading h2 {
-      color: #ffffff;
+      background: #111;
+      color: #fff;
     }
 
     .contact .section-heading p {
-      color: #dddddd;
+      color: #ddd;
     }
 
     .contact-layout {
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
       gap: 2rem;
-      align-items: start;
+      align-items: flex-start;
     }
 
-    .contact-details p {
-      margin-bottom: 0.5rem;
+    .contact-layout p {
       font-size: 0.95rem;
     }
 
-    .contact-details strong {
-      color: #ffffff;
-    }
-
     .contact-box {
-      background: #1b1b1b;
+      background: #1a1a1a;
       border-radius: 1.25rem;
       padding: 1.6rem 1.7rem;
       border: 1px solid #2a2a2a;
@@ -424,11 +303,10 @@
 
     .contact-box label {
       display: block;
-      font-size: 0.85rem;
       margin-bottom: 0.15rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      opacity: 0.85;
     }
 
     .contact-box input,
@@ -437,71 +315,55 @@
       padding: 0.55rem 0.7rem;
       border-radius: 0.6rem;
       border: 1px solid #3a3a3a;
-      background: #111111;
-      color: #ffffff;
-      font: inherit;
-      margin-bottom: 0.7rem;
-    }
-
-    .contact-box small {
-      font-size: 0.75rem;
-      opacity: 0.7;
-      display: block;
-      margin-bottom: 0.5rem;
+      background: #111;
+      color: #fff;
+      font-family: "Inter", sans-serif;
+      font-size: 0.9rem;
+      margin-bottom: 0.8rem;
     }
 
     footer {
-      border-top: 1px solid #222;
       background: #050505;
-      color: #aaaaaa;
+      border-top: 1px solid #222;
+      padding: 1.2rem;
+      color: #aaa;
+      text-align: center;
       font-size: 0.82rem;
     }
 
-    .footer-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 1.2rem 1.5rem 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 0.7rem;
-      align-items: center;
-    }
-
-    /* Responsive */
-
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       .hero-inner {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: minmax(0,1fr);
       }
 
       .hero-card {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
       }
 
-      .about-layout,
       .contact-layout {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: minmax(0,1fr);
       }
 
       nav ul {
-        display: none;
-      }
-
-      .nav-inner {
-        justify-content: space-between;
+        display: none; /* keep it simple on mobile */
       }
     }
   </style>
 </head>
+
 <body>
 
+<!-- HEADER -->
 <header>
   <div class="nav-inner">
     <div class="logo-wrap">
-      <div class="logo-mark">TX</div>
-      <div class="logo-text">ELITE PROPERTY SERVICES</div>
+      <img src="logo transparent bakground.png"
+           alt="Elite Property Services logo"
+           style="height:36px; width:auto;">
+      <div class="logo-text">Elite Property Services</div>
     </div>
+
     <nav>
       <ul>
         <li><a href="#services">Services</a></li>
@@ -510,27 +372,20 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+
     <a href="#contact" class="btn-primary">Request a quote</a>
   </div>
 </header>
 
-<section class="hero" id="top">
-  <div class="hero-overlay"></div>
+<!-- HERO -->
+<section class="hero">
   <div class="hero-inner">
+
     <div>
-      <div class="hero-tag">Home Renovations · Pool Repairs · Outdoor Living</div>
-      <h1>
-        Custom renovations and <span>pool transformations</span> built to last.
-      </h1>
-      <p>
-        Elite Property Services delivers high-quality home renovations, pool repairs, and outdoor living spaces with craftsmanship you can trust and service you can rely on throughout DFW and surrounding areas.
-      </p>
+      <p class="hero-tag">Home Renovations · Pool Repairs · Outdoor Living</p>
+      <h1>Custom renovations & <span>pool transformations</span> built to last.</h1>
+      <p>Serving DFW and surrounding areas with expert craftsmanship, honest service, and attention to detail.</p>
       <a href="#contact" class="btn-primary">Schedule your free estimate</a>
-      <div class="hero-meta">
-        <span>• Interior & exterior renovations</span>
-        <span>• Pool tile, coping & repairs</span>
-        <span>• Pergolas, patios & porches</span>
-      </div>
     </div>
 
     <aside class="hero-card">
@@ -538,260 +393,194 @@
       <p><strong>Phone:</strong> 214-460-9415</p>
       <p><strong>Email:</strong> admin@elitetexas.co</p>
       <p><strong>Address:</strong> 302 N. Church St, Prosper, TX 75078</p>
-      <p><strong>Service area:</strong> Serving all of DFW and surrounding areas</p>
-      <p>Licensed · Insured · Locally owned</p>
+      <p><strong>Service area:</strong> DFW + surrounding areas</p>
     </aside>
+
   </div>
 </section>
 
-<main>
-  <!-- Services -->
-  <section id="services">
-    <div class="section-inner">
-      <div class="section-heading">
-        <h2>What we do</h2>
-        <p>From dated interiors to damaged pool tile, we handle the details so you can enjoy your home again.</p>
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+
+    <div class="section-heading">
+      <h2>What we do</h2>
+      <p>High-quality renovations, repairs, and custom outdoor structures.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Pool Repairs & Renovations</h3>
+        <p>Tile, coping, plaster, water features, spillways, and more to bring your pool back to life.</p>
       </div>
 
-      <div class="services-grid">
-        <article class="service-card">
-          <div class="service-label">Pools</div>
-          <h3>Pool repairs & renovations</h3>
-          <p>
-            Restore and refresh your pool with expert repairs and clean, modern finishes.
-          </p>
-          <ul>
-            <li>Tile, coping & plaster repairs</li>
-            <li>Water feature rebuilds & veneers</li>
-            <li>Decking, steps & safety updates</li>
-          </ul>
-        </article>
+      <div class="service-card">
+        <h3>Home Renovations</h3>
+        <p>Bathrooms, kitchens, flooring, and built-ins designed to fit the way you live.</p>
+      </div>
 
-        <article class="service-card">
-          <div class="service-label">Interiors</div>
-          <h3>Home renovations</h3>
-          <p>
-            Thoughtful updates that make everyday spaces brighter, more functional, and tailored to you.
-          </p>
-          <ul>
-            <li>Bathrooms & kitchens</li>
-            <li>Living rooms & built-ins</li>
-            <li>Flooring & trim work</li>
-          </ul>
-        </article>
-
-        <article class="service-card">
-          <div class="service-label">Outdoors</div>
-          <h3>Pergolas, porches & patios</h3>
-          <p>
-            Extend your living space outdoors with custom structures and detailed finishes.
-          </p>
-          <ul>
-            <li>Pergolas & patio covers</li>
-            <li>Front porches & railings</li>
-            <li>Outdoor seating & entertaining areas</li>
-          </ul>
-        </article>
+      <div class="service-card">
+        <h3>Pergolas, Patios & Porches</h3>
+        <p>Custom pergolas, patio covers, porches, and railings that extend your living space outdoors.</p>
       </div>
     </div>
-  </section>
 
-  <!-- Gallery -->
-  <section id="gallery">
-    <div class="section-inner">
-      <div class="section-heading">
-        <h2>Recent projects</h2>
-        <p>A glimpse at some of the pergolas, porches, interiors, and pool features we’ve completed for homeowners like you.</p>
-      </div>
+  </div>
+</section>
 
-      <div class="gallery-grid">
-        <figure class="gallery-item">
-          <img src="IMG_1772.jpg" alt="Custom stained wood pergola and deck" />
-          <figcaption class="gallery-caption">Custom stained pergola and raised deck.</figcaption>
-        </figure>
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-inner">
 
-        <figure class="gallery-item">
-          <img src="IMG_1776a.jpg" alt="White patio pergola attached to home" />
-          <figcaption class="gallery-caption">Clean, bright pergola for a shaded patio.</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
-          <img src="IMG_1781.jpg" alt="Updated front porch with custom railing" />
-          <figcaption class="gallery-caption">Front porch refresh with detailed railing.</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
-          <img src="IMG_1799.jpg" alt="Renovated bathroom with modern vanity and shower" />
-          <figcaption class="gallery-caption">Bathroom renovation with new vanity & shower.</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
-          <img src="IMG_1802.jpg" alt="Living room with built in shelving and fireplace" />
-          <figcaption class="gallery-caption">Updated living room with built-ins and fireplace.</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
-          <img src="veneer repair COMPLETED.jpg" alt="Before and after of repaired pool wall veneer" />
-          <figcaption class="gallery-caption">Pool veneer repair – before & after.</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
-          <img src="calcium clean AFTER1.jpg" alt="Pool tile after calcium cleaning" />
-          <figcaption class="gallery-caption">Calcium build-up removed from pool tile.</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
-          <img src="calcium clean AFTER2.jpg" alt="Second view of pool tile after calcium cleaning" />
-          <figcaption class="gallery-caption">Calcium cleaning – additional view.</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
-          <img src="fountain repair AFTER.jpg" alt="Repaired fountain feature" />
-          <figcaption class="gallery-caption">Fountain feature repaired and refreshed.</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
-          <img src="lake tile redo AFTER.jpg" alt="Lake-side pool tile redo" />
-          <figcaption class="gallery-caption">Pool tile redo for a clean shoreline look.</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
-          <img src="paver step repair AFTER.jpg" alt="Repaired paver steps" />
-          <figcaption class="gallery-caption">Paver steps repaired and leveled.</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
-          <img src="planter coping repair AFTER1.jpg" alt="Planter coping repair around pool" />
-          <figcaption class="gallery-caption">Planter coping repairs tying into pool decking.</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
-          <img src="planter coping repair AFTER2.jpg" alt="Second view of planter coping repair" />
-          <figcaption class="gallery-caption">Planter coping repair – alternate angle.</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
-          <img src="screen fence AFTER.jpg" alt="Screen fence repair" />
-          <figcaption class="gallery-caption">Updated screen fence for privacy and safety.</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
-          <img src="spa spillway redo AFTER.jpg" alt="Spa spillway redo" />
-          <figcaption class="gallery-caption">Spa spillway rebuilt for smooth water flow.</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
-          <img src="spillway repair AFTER.jpg" alt="Another spa spillway repair" />
-          <figcaption class="gallery-caption">Additional view of spillway repair.</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
-          <img src="tile redo AFTER.jpg" alt="Pool tile redo closeup" />
-          <figcaption class="gallery-caption">Fresh pool tile for a modern edge.</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
-          <img src="tile redo2 AFTER.jpg" alt="Pool tile redo wide view" />
-          <figcaption class="gallery-caption">Tile redo – wide view.</figcaption>
-        </figure>
-
-        <figure class="gallery-item">
-          <img src="tile redo2 AFTER2.jpg" alt="Another pool tile redo angle" />
-          <figcaption class="gallery-caption">Tile redo – alternate angle.</figcaption>
-        </figure>
-      </div>
+    <div class="section-heading">
+      <h2>Recent Projects</h2>
+      <p>A look at some of our recent home, pool, and outdoor projects around DFW.</p>
     </div>
-  </section>
 
-  <!-- About -->
-  <section id="about">
-    <div class="section-inner">
-      <div class="section-heading">
-        <h2>About Elite Property Services</h2>
-        <p>We’re a local, hands-on company focused on quality craftsmanship, clear communication, and projects done right the first time.</p>
-      </div>
+    <div class="gallery-grid">
 
-      <div class="about-layout">
-        <div>
-          <p>
-            At Elite Property Services, we believe your home and outdoor spaces should work for the way you actually live. Whether you’re updating a bathroom, rebuilding a pool feature, or adding a new pergola, we bring the same attention to detail to every project.
-          </p>
-          <p>
-            You work directly with our team from estimate to final walkthrough. We show up when we say we will, protect your property while we work, and leave every job site clean.
-          </p>
-          <p>
-            If you’ve been putting off a renovation or repair, we’d love to talk through options and help you plan the right solution for your home.
-          </p>
-        </div>
+      <figure class="gallery-item">
+        <img src="IMG_1772.jpg" alt="Wood pergola and deck" />
+      </figure>
 
-        <aside class="about-highlight">
-          <h3>Why homeowners choose us</h3>
-          <ul>
-            <li>Transparent, detailed estimates</li>
-            <li>Skilled craftsmanship in both interior and exterior work</li>
-            <li>Respectful crews and clean job sites</li>
-            <li>Projects scheduled around your life</li>
-          </ul>
-          <div class="about-badges">
-            <span class="badge">Locally owned</span>
-            <span class="badge">Home & pool experts</span>
-            <span class="badge">Quality-first mindset</span>
-          </div>
-        </aside>
-      </div>
+      <figure class="gallery-item">
+        <img src="IMG_1776a.jpg" alt="White pergola attached to home" />
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="IMG_1781.jpg" alt="Front porch with custom railing" />
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="IMG_1799.jpg" alt="Renovated bathroom" />
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="IMG_1802.jpg" alt="Updated living room with fireplace" />
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="veneer repair COMPLETED.jpg" alt="Pool veneer repair before and after" />
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="calcium clean AFTER1.jpg" alt="Calcium clean on pool tile" />
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="calcium clean AFTER2.jpg" alt="Calcium clean second angle" />
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="fountain repair AFTER.jpg" alt="Fountain repair" />
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="lake tile redo AFTER.jpg" alt="Lake tile redo" />
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="paver step repair AFTER.jpg" alt="Paver step repair" />
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="planter coping repair AFTER1.jpg" alt="Planter coping repair" />
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="planter coping repair AFTER2.jpg" alt="Planter coping repair second angle" />
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="screen fence AFTER.jpg" alt="Screen fence repair" />
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="spa spillway redo AFTER.jpg" alt="Spa spillway redo" />
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="spillway repair AFTER.jpg" alt="Spillway repair" />
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="tile redo AFTER.jpg" alt="Tile redo" />
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="tile redo2 AFTER.jpg" alt="Tile redo wide view" />
+      </figure>
+
+      <figure class="gallery-item">
+        <img src="tile redo2 AFTER2.jpg" alt="Tile redo alternate angle" />
+      </figure>
+
     </div>
-  </section>
 
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <div class="section-inner">
-      <div class="section-heading">
-        <h2>Ready to talk about your project?</h2>
-        <p>Share a few details and we’ll follow up with a convenient time to look at your space and provide a quote.</p>
-      </div>
+  </div>
+</section>
 
-      <div class="contact-layout">
-        <div class="contact-details">
-          <p><strong>Phone:</strong> 214-460-9415</p>
-          <p><strong>Email:</strong> admin@elitetexas.co</p>
-          <p><strong>Address:</strong> 302 N. Church St, Prosper, TX 75078</p>
-          <p><strong>Service area:</strong> Serving all of DFW and surrounding areas</p>
-          <p>We typically respond to quote requests within one business day.</p>
-        </div>
-
-        <form class="contact-box" action="mailto:admin@elitetexas.co" method="post" enctype="text/plain">
-          <label for="name">Name</label>
-          <input id="name" name="Name" type="text" required />
-
-          <label for="email">Email</label>
-          <input id="email" name="Email" type="email" required />
-
-          <label for="phone">Phone</label>
-          <input id="phone" name="Phone" type="tel" />
-
-          <label for="details">Project details</label>
-          <textarea id="details" name="Details" rows="4" placeholder="Tell us about your renovation or pool project..." required></textarea>
-
-          <small>This form will open your email app to send us your message.</small>
-
-          <button class="btn-primary" type="submit">Send my project details</button>
-        </form>
-      </div>
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-heading">
+      <h2>About Elite Property Services</h2>
+      <p>Skilled craftsmanship, reliable communication, and honest service.</p>
     </div>
-  </section>
-</main>
+    <p>
+      Elite Property Services provides hands-on renovation work for homeowners across the DFW area,
+      specializing in home remodeling, pool tile and coping, pergolas, patios, and outdoor living features.
+      We focus on quality, details, and treating every home as if it were our own.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="section-inner">
+
+    <div class="section-heading">
+      <h2>Request a Quote</h2>
+      <p>Tell us about your project — we respond within one business day.</p>
+    </div>
+
+    <div class="contact-layout">
+
+      <div>
+        <p><strong>Phone:</strong> 214-460-9415</p>
+        <p><strong>Email:</strong> admin@elitetexas.co</p>
+        <p><strong>Address:</strong> 302 N. Church St, Prosper, TX 75078</p>
+        <p><strong>Service Area:</strong> All of DFW & surrounding areas</p>
+      </div>
+
+      <form class="contact-box" action="mailto:admin@elitetexas.co" method="post" enctype="text/plain">
+        <label>Name</label>
+        <input name="Name" required />
+
+        <label>Email</label>
+        <input type="email" name="Email" required />
+
+        <label>Phone</label>
+        <input name="Phone" />
+
+        <label>Project Details</label>
+        <textarea name="Details" rows="4" required></textarea>
+
+        <button class="btn-primary" type="submit">Send</button>
+      </form>
+
+    </div>
+  </div>
+</section>
 
 <footer>
-  <div class="footer-inner">
-    <span>© <span id="year"></span> Elite Property Services, LLC. All rights reserved.</span>
-    <span>Home renovations · Pool repairs · Outdoor living</span>
-  </div>
+  © <span id="year"></span> Elite Property Services, LLC. All rights reserved.
 </footer>
 
 <script>
-  // Update year in footer
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
 </html>
+
